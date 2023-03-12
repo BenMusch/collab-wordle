@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'games/index'
-  get 'games/show'
+  root to: 'games#index'
+
   resources :games, only: [:index, :show]
 end
