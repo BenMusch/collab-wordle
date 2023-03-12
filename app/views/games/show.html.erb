@@ -1,0 +1,21 @@
+<h1>Game</h1>
+
+<style>
+table, th, td {
+  border: 1px solid;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+
+<table>
+  <% guess_values_with_empty(@game).each do |guess| %>
+    <tr>
+      <% 5.times do |i| %>
+        <td style="background-color: <%= color_for_guess(@game.answer, guess, i)%>">
+          <%= guess[i] %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
